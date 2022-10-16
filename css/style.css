@@ -21,6 +21,7 @@ body {
     background: #fff;
     color: #777777;
     font-size: 14px;
+    cursor:url(https://cdn.custom-cursor.com/db/cursor/32/Fairy_Lagoon_Gradient_Cursor.png) , default!important;
     line-height: 31px;
     letter-spacing: 0;
     font-weight: 400;
@@ -220,6 +221,10 @@ strong {
     font-size: 4.125rem;
     line-height: 4.063rem;
     font-weight: 300;
+    background: #00FF00;
+    background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h4 a {
@@ -231,6 +236,7 @@ h4 a {
     font-size: 14px;
     font-weight: bold;
     padding-left: 20px;
+
 }
 
 .dark-text hr {
@@ -304,6 +310,7 @@ mark {
 a:focus,
 a:hover {
     color: #0E97EE;
+    cursor:url(https://cdn.custom-cursor.com/db/pointer/32/Fairy_Lagoon_Gradient_Pointer.png) , pointer!important;
 }
 
 .intro2 i {
@@ -339,6 +346,7 @@ a:hover {
 }
 
 .btn-primary:hover {
+    cursor:url(https://cdn.custom-cursor.com/db/pointer/32/Fairy_Lagoon_Gradient_Pointer.png) , pointer!important;
     background-color: #2187BB;
     border: 1px solid #0E97EE;
 }
@@ -346,11 +354,14 @@ a:hover {
 .btn-info {
     background-color: #545454;
     border: 1px solid #656565;
+    cursor:url(https://cdn.custom-cursor.com/db/pointer/32/Fairy_Lagoon_Gradient_Pointer.png) , pointer!important;
+
 }
 
 .btn-info:hover {
     background-color: #656565;
     border: 1px solid #545454;
+    cursor:url(https://cdn.custom-cursor.com/db/pointer/32/Fairy_Lagoon_Gradient_Pointer.png) , pointer!important;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
@@ -358,6 +369,7 @@ a:hover {
 .navbar-inverse .navbar-nav > .active > a:focus {
     background-color: #0E97EE;
     color: #fff;
+    cursor:url(https://cdn.custom-cursor.com/db/pointer/32/Fairy_Lagoon_Gradient_Pointer.png) , pointer!important;
 }
 
 .navbar-inverse {
