@@ -1,10 +1,7 @@
-# Documentatia proiectului la MAP
+# doctemplate
+Doctemplate is a simple one page HTML/CSS documentation template for your projects. As simple as it is. Enjoy it!
 
-## Documentatia se gaseste pe un site web incarcat pe github
+![Doctemplate](/doctemplate.png)
 
-## Demo
-Click pe acest link pentru a accesa documentatia: https://leonardstaniloiu.github.io/
-
-## Template editat
-Acesta este un template luat si modificat
-Multumiri lui http://themeforest.net/user/templatevisual?ref=surjithctly&utm_source=github_surjithctly_docs
+## License
+[MIT](https://opensource.org/licenses/MIT) © [Carlos Yllobre](https://iamcharlie.design/)
