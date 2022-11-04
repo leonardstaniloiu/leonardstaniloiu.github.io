@@ -1,4 +1,4 @@
-### Documentatie web: leonardstaniloiu.github.io
+### Documentatie web: [](leonardstaniloiu.github.io)
 ##### Acest site a fost creat folosind [GitHub Pages](https://pages.github.com/).
 
 ###  Problema reginelor
