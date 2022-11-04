@@ -1,6 +1,6 @@
 ### Documentatie web: leonardstaniloiu.github.io
 
-### `#0969DA` Problema reginelor
+### `rgb(9, 105, 218)` Problema reginelor
 
 ### Comenzi pentru rulare proiect:
 
