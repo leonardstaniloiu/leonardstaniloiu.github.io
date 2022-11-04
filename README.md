@@ -4,7 +4,8 @@
 ###  Problema reginelor
 
 ### Comenzi pentru rulare proiect:
-
-#### ```docker pull leonardstaniloiu/regine
-docker run --rm --name regine leonardstaniloiu/regine```
+ ```
+ ruby docker pull leonardstaniloiu/regine
+docker run --rm --name regine leonardstaniloiu/regine
+```
 
