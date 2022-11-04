@@ -1,7 +1,9 @@
+# Problema reginelor
+
+
 ### Documentatie web: [Apasa click aici](leonardstaniloiu.github.io)
 ##### Acest site a fost creat folosind [GitHub Pages](https://pages.github.com/).
 
-###  Problema reginelor
 
 ### ![poza](https://www.simpleimageresizer.com/_uploads/photos/b013fbce/images-removebg-preview_1_2_30x30.png) Cum rulam proiectul?
  ```bash
