@@ -2,7 +2,7 @@
 
 
 
-### Documentatie web: [Apasa click aici](leonardstaniloiu.github.io)
+### Documentatie web: [Apasa click aici](https://leonardstaniloiu.github.io/)
 ##### Acest site a fost creat folosind [GitHub Pages](https://pages.github.com/).
 
 
