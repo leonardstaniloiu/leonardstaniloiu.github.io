@@ -5,6 +5,6 @@
 
 ### Comenzi pentru rulare proiect:
 
-#### docker pull leonardstaniloiu/regine
-#### docker run --rm --name regine leonardstaniloiu/regine
+#### ```docker pull leonardstaniloiu/regine
+#### docker run --rm --name regine leonardstaniloiu/regine```
 
