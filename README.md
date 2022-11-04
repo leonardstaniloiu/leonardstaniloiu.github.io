@@ -1,6 +1,7 @@
 ### Documentatie web: leonardstaniloiu.github.io
+##### Acest site a fost creat folosind [GitHub Pages](https://pages.github.com/).
 
-### `rgb(9, 105, 218)` Problema reginelor
+###  Problema reginelor
 
 ### Comenzi pentru rulare proiect:
 
