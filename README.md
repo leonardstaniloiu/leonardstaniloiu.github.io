@@ -3,7 +3,7 @@
 
 ###  Problema reginelor
 
-### ![poza](https://o.remove.bg/downloads/da9fe833-82ce-4ddb-9b0b-9887384de73f/images-removebg-preview.png) Cum rulam proiectul?
+### ![poza]([https://o.remove.bg/downloads/da9fe833-82ce-4ddb-9b0b-9887384de73f/images-removebg-preview.png](https://www.simpleimageresizer.com/_uploads/photos/b013fbce/images-removebg-preview_1_2_30x30.png)) Cum rulam proiectul?
  ```bash
 docker pull leonardstaniloiu/regine
 docker run --rm --name regine leonardstaniloiu/regine
