@@ -10,5 +10,7 @@ docker run --rm --name regine leonardstaniloiu/regine
 ```
 
 
+##### Cele 12 solutii:
+
 ![Solutii](https://user-images.githubusercontent.com/24358394/40299747-ef2f154a-5cef-11e8-8797-e885ee97f966.png)
 
