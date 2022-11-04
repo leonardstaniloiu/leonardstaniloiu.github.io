@@ -1,6 +1,8 @@
 ### Documentatie web: leonardstaniloiu.github.io
 
-# Comenzi pentru proiect:
+### Problema reginelor
 
-## docker pull leonardstaniloiu/regine
-## docker run --rm --name regine leonardstaniloiu/regine
+### Comenzi pentru rulare proiect:
+
+#### docker pull leonardstaniloiu/regine
+#### docker run --rm --name regine leonardstaniloiu/regine
