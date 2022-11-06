@@ -8,7 +8,7 @@
 
 
 
-### ![poza](https://www.simpleimageresizer.com/_uploads/photos/b013fbce/images-removebg-preview_1_2_30x30.png) Cum rulam proiectul?
+### ![poza](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconexperience.com%2F_img%2Fo_collection_png%2Fgreen_dark_grey%2F16x16%2Fplain%2Fsymbol_questionmark.png&f=1&nofb=1&ipt=366f6ab0aca5ffe27d3597be1e837557bf332ea4fef860be68a4455af9c04eff&ipo=images) Cum rulam proiectul?
  ```bash
 docker pull leonardstaniloiu/regine
 docker run --rm --name regine leonardstaniloiu/regine
