@@ -78,84 +78,114 @@
                  <h2>Codul C++</h2>
                  <p>Mai jos se poate observa, copia si testa codul</p>
 
-                <pre class="language-cpp">
+
+                <pre class="language-cpp" id="code">
 #include &lt;iostream&gt;
-using namespace std;
-                        
-int n , x[20];
-bool gasit = false;
 
-    bool solutie(int k)
+    using namespace std;
+    int st[11],k,i,as,ev,j;
+    int n = 8;
+    void init()
     {
-        return(k==8);
+        st[k]=0;
     }
-
-    bool Valid(int k)
+    int succesor()
     {
-        for(int i = 1 ; i < k ; i ++)
+        if(st[k]< n)
         {
-            if(x[i] == x[k])
-                return false;
-            if(k - i == abs(x[k] - x[i]))
-                return false;
+            st[k]++;
+            return 1;
         }
-        return true;
-    }
-
-    void Afisare(int n)
-    {
-        gasit = true;
-        for(int i = 1 ; i <= 8 ; i ++)
-        {
-            for(int j = 1 ; j <= 8 ; j ++)
-                if(x[j] == i)
-                    cout <<"\t" << " Q ";
-                else
-                    cout <<"\t" << " - ";
-            cout << endl;
-        }
-        cout << endl;
-    }
-
-    void Back(int k)
-    {
-        for(int i = 1 ; !gasit && i <= 8 ; i ++)
-        {
-            x[k] = i;
-            if(Valid(k))
-                if(solutie(k))
-                    Afisare(8);
-                else
-                    Back(k + 1);
-        }
-
-    }
-
-    int main()
-    {
-
-        Back(1);
         return 0;
     }
-
+    int valid()
+    {
+        for(i=1;i&lt;k;i++)
+            if(st[i]==st[k]||abs(st[i]-st[k])==abs(i-k))
+                return 0;
+        return 1;
+    }
+    int solutie()
+    {
+        return (k==n);
+    }
+    void tipar()
+    {
+        for(i=1;i &lt;= n;i++)
+        {
+            for(j=1;j &lt;= n;j++)
+                if(st[i]==j)
+                    cout&lt;&lt;"\tQ";
+                else
+                    cout&lt;&lt;"\t- ";
+            cout&lt;&lt;endl;
+        }
+        cout&lt;&lt;endl;
+    }
+    int main()
+    {
+    
+        int contor = 0;
+        k = 1;
+        init();
+        while(k)
+        {
+            do
+            {
+                as=succesor();
+                if(as)
+                    ev=valid();
+            }
+            while(!(as&&ev||!as));
+            if(as)
+                if(solutie())
+                {
+                    contor++;
+                    cout &lt;&lt;"Solutia cu numarul:" &lt;&lt; contor &lt;&lt; endl;
+                    tipar();
+                    cout&lt;&lt;endl;
+                }
+                else
+                {
+                    k++;
+                    init();
+                }
+            else
+                k--;
+        }
+        return 0;
+    }
+    
                         
                 </pre>
-
-
-
-            
+  
                 <div class="divider" style="width:24%; margin:30px 0;"></div>
-                
+                <h2>Functia init()</h2>
+                <p>Functia init este folosita pentru a initializa elementul curent din stiva cu 0.</p>
+                <br>
+
+                <h2>Functia succesor()</h2>
+                <p>Functia succesor este folosita pentru a incrementa valoarea numarului care este continut in stiva pe pozitia k, verifica
+                    daca este mai mica decat n si mai verifica daca se creaza o configuratie valida.
+                </p>
+                <br>
+                <h2>Functia valid()</h2>
+                <p>Functia valid verifica proprietatiile pe care trebuie sa le aiba reginele ca sa nu se atace, respectiv sa nu se afle pe aceeasi linie,coloana, sau diagonala.</p>
+                <br>
+                <h2>Functia solutie()</h2>
+                <p>Functia solutie se asigura ca tot nivelul stivei sa fie completat pana la n, respectiv pana la 8 in cazul nostru.</p>
+                <br>
+                <h2>Functia afisare()</h2>
+                <p>In functia de afisare se construieste matricea, adica tabla noastra de sah 8x8 si se pune regina pe coloana acolo unde se poate forma o solutie, altfel se va pune un caracter '-'</p>
+                <br>
 
             </div>
+           
 
         </div>
-
+    
 
     </div>
-    <script>
-        
-    </script>
 </body>
 </script>
 </body>
