@@ -1,62 +1,75 @@
 #include <iostream>
 
 using namespace std;
-
-
-int contorSolutii = 0;
+int st[11],k,i,as,ev,j;
 int n = 8;
-int regine[100];
-
-bool verificare(int aux)
+void init()
 {
-    for (int i = 0; i < aux; ++i)
-        if(regine[i] == regine[aux] || aux-i == abs(regine[aux]-regine[i]))
-        return false;
-    return true;
-
+    st[k]=0;
 }
-
-bool solutie(int aux)
+int succesor()
 {
-    if(aux == n)
-        return true;
-    return false;
+    if(st[k]<n)
+    {
+        st[k]++;
+        return 1;
+    }
+    return 0;
 }
-
-void afisareSolutii()
+int valid()
 {
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if(regine[j] == i)
-                cout << "Q";
+    for(i=1;i<k;i++)
+        if(st[i]==st[k]||abs(st[i]-st[k])==abs(i-k))
+            return 0;
+    return 1;
+}
+int solutie()
+{
+    return (k==n);
+}
+void tipar()
+{
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+            if(st[i]==j)
+                cout<<"\tQ";
             else
-                cout << "-";
-            cout << " ";
-        }
-        cout << endl;
+                cout<<"\t- ";
+        cout<<endl;
     }
-    cout << endl;
-    contorSolutii++;
+    cout<<endl;
 }
-
-void backTracking(int coloana)
-{
-    for (int i = 0; i < coloana; ++i) {
-        regine[coloana] = i;
-        if(verificare(coloana))
-        {
-            if (solutie(coloana)) {
-                afisareSolutii();
-            } else
-                backTracking(coloana + 1);
-        }
-    }
-}
-
 int main()
 {
-    backTracking(1);
 
-
+    int contor = 0;
+    k = 1;
+    init();
+    while(k)
+    {
+        do
+        {
+            as=succesor();
+            if(as)
+                ev=valid();
+        }
+        while(!(as&&ev||!as));
+        if(as)
+            if(solutie())
+            {
+                contor++;
+                cout << "Solutia cu numarul:" << contor << endl;
+                tipar();
+                cout<<endl;
+            }
+            else
+            {
+                k++;
+                init();
+            }
+        else
+            k--;
+    }
     return 0;
 }
