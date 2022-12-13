@@ -4,13 +4,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Problema reginelor</title>
     <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
-    <meta name="author" content="Carlos Yllobre">
-
+    <meta name="author" content="Leonard Staniloiu">
     <link rel="stylesheet" href="style.css?">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
     
@@ -31,6 +30,7 @@
         
     </div>
 
+
     <div class="container clear">
         <div class="row wrapper">
 
@@ -40,15 +40,8 @@
                 <a class="section" href="#">Despre problema reginelor</a>
                 <div class="divider left"></div>
 
-                <a class="title" href="#gettingstarted">Sa incepem</a>
+                <a class="section" href="#installingapp">Solutia BackTracking</a>
 
-                <a class="section" href="#installingapp">Installing the App</a>
-                 <a class="section" href="#openingapp">Opening the App</a>
-
-                <div class="divider left"></div>
-
-            
-             <div class="space double"></div>
 
             </div>
 
@@ -70,70 +63,87 @@
                     Martin Richards⁠ a publicat un program ce numără soluțiile pentru problema cu n dame cu ajutorul operațiilor la nivel de bit⁠</p>
 
                 <p>Problema cu opt regine are 92 de soluții distincte. Daca soluțiile care diferă numai prin operațiunile de simetrie (rotație și reflexie a tablei) sunt considerate a fi una singură, problema are 12 soluții.</p>
-                <p id="gettingstarted">Sa incepem</p> 
-                 
+    
         <div class="divider" style="width:24%; margin:50px 0;"></div>
 
-                <h1>Sa incepem</h1>
 
-                <h2>This is a sub-header</h2>
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
 
-                <p id="installingapp"><b>Important:</b> This line is for an important information.</p>
-                
-                
-                <h2>Install the App</h2>
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-                   <ol>
-                    <li>
-                     The first thing you need to do to install this app.
-                    </li>
-                    <br>
-                    <li>
-                    The second thing you need to do to install this app.
-                    </li>
-                    <br id="openingapp">
-                    <li>
-                     The app is installed now.
-                    </li>
-                    <br>
-                </ol>
-                
+                <h2>Solutia backtracking</h2>
+              <p>  Animația ilustrează abordarea backtracking de rezolvare a problemei. O regină este plasată într-o coloană care se știe că nu va provoca un conflict. Dacă nu se găsește o coloană, programul revine la ultima stare bună și apoi încearcă o altă coloană.</p> 
 
-                <h2>Opening the app</h2>
+                <p id="installingapp"><b>Poza:</b></p>
+                 <img style="margin-left:20px;" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Eight-queens-animation.gif" alt="gif-regine">
                 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 
-                 <ol>
-                    <li>
-                     The first thing you need to do to open this app.
-                    </li>
-                    <br>
-                    <li>
-                     The second thing you need to do to open this app.
-                    </li>
-                    <br>
-                    <li>
-                      The third thing you need to do to open this app.
-                    </li>
-                    <br>
-                    <li>
-                     Open the app and start using it!
-                    </li>
-                    <br>
-                </ol>
-                
-                <p id="basicfeatures">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                 <h2>Codul C++</h2>
+                 <p>Mai jos se poate observa, copia si testa codul</p>
+
+                <pre class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+                        
+int n , x[20];
+bool gasit = false;
+
+    bool solutie(int k)
+    {
+        return(k==8);
+    }
+
+    bool Valid(int k)
+    {
+        for(int i = 1 ; i < k ; i ++)
+        {
+            if(x[i] == x[k])
+                return false;
+            if(k - i == abs(x[k] - x[i]))
+                return false;
+        }
+        return true;
+    }
+
+    void Afisare(int n)
+    {
+        gasit = true;
+        for(int i = 1 ; i <= 8 ; i ++)
+        {
+            for(int j = 1 ; j <= 8 ; j ++)
+                if(x[j] == i)
+                    cout <<"\t" << " Q ";
+                else
+                    cout <<"\t" << " - ";
+            cout << endl;
+        }
+        cout << endl;
+    }
+
+    void Back(int k)
+    {
+        for(int i = 1 ; !gasit && i <= 8 ; i ++)
+        {
+            x[k] = i;
+            if(Valid(k))
+                if(solutie(k))
+                    Afisare(8);
+                else
+                    Back(k + 1);
+        }
+
+    }
+
+    int main()
+    {
+
+        Back(1);
+        return 0;
+    }
+
+                        
+                </pre>
+
+
+
             
-            
-        
-                <div class="doublespace"></div>
                 <div class="divider" style="width:24%; margin:30px 0;"></div>
                 
 
@@ -143,7 +153,9 @@
 
 
     </div>
-
+    <script>
+        
+    </script>
 </body>
 </script>
 </body>
