@@ -1,197 +1,125 @@
-
 <!doctype html>
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Problema reginelor</title>
-    <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
-    <meta name="author" content="Leonard Staniloiu">
-    <link rel="stylesheet" href="stil.css?">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
-    
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.js" integrity="sha512-8XtSBQOB+R4dpcpQBpYC5Q7ti7y/MjIF0l/1ZiSd4xM04Dr052S/Py981Pzmwo2HrXCR2JhYE1MYR15aZGMnig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-</head>
-
-<body>
-
-    <div class="navbar clear nav-top">
-        <div class="row content">
-            <a href="#"><img class="logo" src="logo.png"></a>
-            <a class="right" style="text-decoration: none;" href="https://github.com/leonardstaniloiu"><i class="fa-brands fa-github"></i>&nbsp; Github</a>
-            
-                <a class="right" style="text-decoration:none; " href="https://hub.docker.com/r/leonardstaniloiu/regine"><i class="fa-brands fa-docker"></i>&nbsp; Go to docker</a>
-        </div>  
-        
-    </div>
-
-
-    <div class="container clear">
-        <div class="row wrapper">
-
-            <div class="sidepanel">
-
-                <a class="title" href="#">Introducere</a>     
-                <a class="section" href="#">Despre problema reginelor</a>
-                <div class="divider left"></div>
-
-                <a class="section" href="#installingapp">Solutia BackTracking</a>
-
-
-            </div>
-
-            <div class="right-col">
-            
-
-
-                <h1 >Introducere</h1>
-                
-                <p>Compozitorul de sah Max Bezzel a publicat problema celor opt regine în 1848. Franz Nauck a publicat primele soluții în 1850.[2] Nauck a și extins problema la n regine, cu n regine pe o tablă de șah de n × n pătrate.
-
-                    De atunci, mulți matematicieni, inclusiv Carl Friedrich Gauss, au lucrat atât la problema inițială cu opt regine cât și la varianta generalizată cu n regine. În 1874, S. Gunther a propus o metodă care utilizează determinanții pentru a găsi soluții. J. W. L. Glaisher⁠(d) a rafinat abordarea lui Gunther.
-                    
-                    În 1972, Edsger Dijkstra a folosit această problemă pentru a ilustra puterea a ceea ce el numește programare structurată. El a publicat o descriere foarte detaliată a unui algoritm backtracking de parcurgere în adâncime.</p> 
-            
-                <h2>Mai multe :</h2>
-                <p>Problema poate fi destul de costisitoare computațional, întrucât sunt 4426165368 (adică, 64C8) aranjamente posibile ale celor opt regine pe o tablă 8×8, dar numai 92 de soluții. Se pot utiliza scurtături care reduc cerințele de calcul, sau reguli aproximative, care evită căutarea cu forța brută. De exemplu, aplicând o regulă simplă, care constrânge fiecare regină să stea pe coloana (sau rândul) ei, deși încă se consideră că se folosește forța brută, se poate reduce numărul de posibilități la 16777216 (88) combinații posibile. Generarea de permutări reduce și mai mult posibilitățile la 40320 (adică 8!), care sunt apoi verificate dacă damele nu se atacă pe diagonală.
-
-                    Martin Richards⁠ a publicat un program ce numără soluțiile pentru problema cu n dame cu ajutorul operațiilor la nivel de bit⁠</p>
-
-                <p>Problema cu opt regine are 92 de soluții distincte. Daca soluțiile care diferă numai prin operațiunile de simetrie (rotație și reflexie a tablei) sunt considerate a fi una singură, problema are 12 soluții.</p>
-    
-        <div class="divider" style="width:24%; margin:50px 0;"></div>
-
-
-
-                <h2>Solutia backtracking</h2>
-              <p>  Animația ilustrează abordarea backtracking de rezolvare a problemei. O regină este plasată într-o coloană care se știe că nu va provoca un conflict. Dacă nu se găsește o coloană, programul revine la ultima stare bună și apoi încearcă o altă coloană.</p> 
-
-                <p id="installingapp"><b>Poza:</b></p>
-                 <img style="margin-left:20px;" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Eight-queens-animation.gif" alt="gif-regine">
-                
-                
-                 <h2>Codul C++</h2>
-                 <p>Mai jos se poate observa, copia si testa codul</p>
-
-
-                <pre class="language-cpp" id="code">
-#include &lt;iostream&gt;
-
-    using namespace std;
-    int st[11],k,i,as,ev,j;
-    int n = 8;
-    void init()
-    {
-        st[k]=0;
-    }
-    int succesor()
-    {
-        if(st[k]< n)
-        {
-            st[k]++;
-            return 1;
-        }
-        return 0;
-    }
-    int valid()
-    {
-        for(i=1;i&lt;k;i++)
-            if(st[i]==st[k]||abs(st[i]-st[k])==abs(i-k))
-                return 0;
-        return 1;
-    }
-    int solutie()
-    {
-        return (k==n);
-    }
-    void tipar()
-    {
-        for(i=1;i &lt;= n;i++)
-        {
-            for(j=1;j &lt;= n;j++)
-                if(st[i]==j)
-                    cout&lt;&lt;"\tQ";
-                else
-                    cout&lt;&lt;"\t- ";
-            cout&lt;&lt;endl;
-        }
-        cout&lt;&lt;endl;
-    }
-    int main()
-    {
-    
-        int contor = 0;
-        k = 1;
-        init();
-        while(k)
-        {
-            do
-            {
-                as=succesor();
-                if(as)
-                    ev=valid();
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(45px);
             }
-            while(!(as&&ev||!as));
-            if(as)
-                if(solutie())
-                {
-                    contor++;
-                    cout &lt;&lt;"Solutia cu numarul:" &lt;&lt; contor &lt;&lt; endl;
-                    tipar();
-                    cout&lt;&lt;endl;
-                }
-                else
-                {
-                    k++;
-                    init();
-                }
-            else
-                k--;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        return 0;
-    }
-    
-                        
-                </pre>
-  
-                <div class="divider" style="width:24%; margin:30px 0;"></div>
-                <h2>Functia init()</h2>
-                <p>Functia init este folosita pentru a initializa elementul curent din stiva cu 0.</p>
-                <br>
 
-                <h2>Functia succesor()</h2>
-                <p>Functia succesor este folosita pentru a incrementa valoarea numarului care este continut in stiva pe pozitia k, verifica
-                    daca este mai mica decat n si mai verifica daca se creaza o configuratie valida.
-                </p>
-                <br>
-                <h2>Functia valid()</h2>
-                <p>Functia valid verifica proprietatiile pe care trebuie sa le aiba reginele ca sa nu se atace, respectiv sa nu se afle pe aceeasi linie,coloana, sau diagonala.</p>
-                <br>
-                <h2>Functia solutie()</h2>
-                <p>Functia solutie se asigura ca tot nivelul stivei sa fie completat pana la n, respectiv pana la 8 in cazul nostru.</p>
-                <br>
-                <h2>Functia afisare()</h2>
-                <p>In functia de afisare se construieste matricea, adica tabla noastra de sah 8x8 si se pune regina pe coloana acolo unde se poate forma o solutie, altfel se va pune un caracter '-'</p>
-                <br>
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-            </div>
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+  </head>
+  <body class="transition-colors duration-300">
+
+
+    <section class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-6 py-20 transition-colors duration-300">
+      <div class="max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center gap-12">
+        
+        <!-- Left Content -->
+        <div class="flex-1 text-center lg:text-left animate-fade-in-up">
+          <!-- Gradient Text Heading -->
+          <h1 class="text-5xl sm:text-6xl font-extrabold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+            Salut, sunt Leo
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-xl transition-colors duration-300">
            
+          </p>
 
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#projects" class="px-6 py-3 text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:brightness-110 rounded-xl font-semibold transition-transform transform hover:scale-105 shadow-md">
+              🚀 Proiecte
+            </a>
+            <a href="/cv.pdf" download class="px-6 py-3 border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-black rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+              📄 Descarca CV
+            </a>
+            <a href="educatie" class="px-6 py-3 border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-black rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+              📚 Educatie & experienta
+            </a>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-6 mt-6 justify-center lg:justify-start text-gray-500 dark:text-gray-300 text-xl">
+            <a href="https://github.com/leonardstaniloiu" target="_blank" class="hover:text-purple-500 transition-colors duration-300"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/leonard-staniloiu-7b9382246/" target="_blank" class="hover:text-purple-500 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:staniloiuleonard@gmail.com" class="hover:text-purple-500 transition-colors duration-300"><i class="fas fa-envelope"></i> Trimite un mail</a>
+          </div>
         </div>
-    
 
-    </div>
+        <!-- Right Image -->
+        <div class="flex-1 flex justify-center animate-float">
+          <img src="img/pozaprofil.png" alt="Sai Bende" class="w-64 h-64 rounded-full border-4 border-indigo-500 dark:border-indigo-400 shadow-xl object-cover hover:scale-105 transition-all duration-500" />
+        </div>
+      </div>
+    </section>
 
-    <footer>
+    <script>
+        // Verifică dacă există o temă salvată în localStorage
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Setează tema inițială
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
 
-    </footer>
-</body>
-</script>
-</body>
+        // Funcția pentru schimbarea temei
+        const themeToggle = document.getElementById('themeToggle');
+        
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const isDark = document.documentElement.classList.contains('dark');
+                
+                if (isDark) {
+                    // Schimbă la light mode
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    // Schimbă la dark mode
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        }
 
+        // Opțional: Ascultă pentru schimbările de preferință de sistem
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                if (e.matches) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            }
+        });
+    </script>
+  </body>
 </html>
