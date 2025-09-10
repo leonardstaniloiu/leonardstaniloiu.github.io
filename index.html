@@ -1,115 +1,144 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Leo's Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
-       window.history.replaceState('','','/');
-    </script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Leo's Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="favicon" type="image/x-icon" href="img/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    window.history.replaceState('', '', '/');
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(45px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(45px);
+      }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
+    @keyframes float {
 
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-    </style>
-  </head>
-  <body class="transition-colors duration-300">
-    <section class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-6 py-20 transition-colors duration-300">
-      <div class="max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center gap-12">
-        
-        <!-- Left Content -->
-        <div class="flex-1 text-center lg:text-left animate-fade-in-up">
-          <!-- Gradient Text Heading -->
-          <h1 data-ro="Salut, sunt Leo" data-en="Hello, I'm Leo" class="text-5xl sm:text-6xl font-extrabold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
-           
-          </h1><br>
-          <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-xl transition-colors duration-300">
-           
-          </p>
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
 
-                <div class="flex gap-6 mt-6 justify-center lg:justify-start text-gray-500 dark:text-gray-300 text-xl">
-                  
-                  <img class="w-6 h-6"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/entityframeworkcore/entityframeworkcore-original.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                  </div>
-                    <div class="flex gap-6 mt-6 justify-center lg:justify-start text-gray-500 dark:text-gray-300 text-xl">
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
-                  <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/embeddedc/embeddedc-original-wordmark.svg" />
-              </div>
-                <br>
-                <br>
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="proiecte.html" data-ro="🚀 Proiecte" data-en="🚀 Projects" class="px-6 py-3 text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:brightness-110 rounded-xl font-semibold transition-transform transform hover:scale-105 shadow-md">
-              🚀 Proiecte
-            </a>
-            <a href="educatie.html" data-ro="📚 Educatie & experienta" data-en="📚 Education & work experience" class="px-6 py-3 border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-black rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
-              📚 Educatie & experienta
-            </a>
-          </div>
-          <br>
-          <!-- Social Icons -->
-          <div class="flex gap-6 mt-6 justify-center lg:justify-start text-gray-500 dark:text-gray-300 text-xl">
-            <a href="https://github.com/leonardstaniloiu" target="_blank" class="hover:text-purple-500 transition-colors duration-300"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/leonard-staniloiu-7b9382246/" target="_blank" class="hover:text-purple-500 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:staniloiuleonard@gmail.com"  class="hover:text-purple-500 transition-colors duration-300"><i class="fas fa-envelope"></i></a>
-          </div>
-          <br><br>  
-      <div data-ro="Schimba limba" data-en="Change language" class="text-white">Schimba limba</div>
-      <a class="text-white font-extrabold" onclick="toggleLanguage('ro')" href="#"><span class="fi fi-ro"></span> | </a></li>
-      <a onclick="toggleLanguage('en')" href="#"><span class="fi fi-us"></span></a></li>
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="transition-colors duration-300">
+  <section
+    class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-6 py-20 transition-colors duration-300">
+    <div class="max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center gap-12">
+
+      <!-- Left Content -->
+      <div class="flex-1 text-center lg:text-left animate-fade-in-up">
+        <!-- Gradient Text Heading -->
+        <h1 data-ro="Salut, sunt Leo" data-en="Hello, I'm Leo"
+          class="text-5xl sm:text-6xl font-extrabold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+        </h1><br>
+        <div
+          data-ro="Imi place sa lucrez in echipa, sunt motivat sa invat continuu si ma adaptez rapid la lucruri noi. Imi doresc sa contribui activ la dezvoltarea si succesul cat mai multor proiecte. Tehnologii utilizate in proiecte profesionale și personale: "
+          data-en="I enjoy working in a team, I am motivated to continuously learn and I adapt quickly to new challenges. I am eager to actively contribute to the development and success of as many projects as possible. Technologies used in professional and personal projects: "
+          class="text-slate-100"></div>
+        <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-xl transition-colors duration-300">
+
+        </p>
+
+        <div class="flex gap-6 mt-6 justify-center lg:justify-start text-gray-500 dark:text-gray-300 text-xl">
+
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/entityframeworkcore/entityframeworkcore-original.svg" />
+          <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
         </div>
-        <!-- Right Image -->
-        <div class="flex-1 flex justify-center animate-float">
-          <img src="img/pozaprofil.png" alt="Leo" class="w-64 h-64 rounded-full border-4 border-indigo-500 dark:border-indigo-400 shadow-xl object-cover hover:scale-105 transition-all duration-500" />
+        <div class="flex gap-6 mt-6 justify-center lg:justify-start text-gray-500 dark:text-gray-300 text-xl">
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg" />
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+          <img class="w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
+          <img class="w-6 h-6"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/embeddedc/embeddedc-original-wordmark.svg" />
         </div>
+        <br>
+        <br>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="proiecte.html" data-ro="🚀 Proiecte" data-en="🚀 Projects"
+            class="px-6 py-3 text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:brightness-110 rounded-xl font-semibold transition-transform transform hover:scale-105 shadow-md">
+            🚀 Proiecte
+          </a>
+          <a href="educatie.html" data-ro="📚 Educatie & experienta" data-en="📚 Education & work experience"
+            class="px-6 py-3 border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-black rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+            📚 Educatie & experienta
+          </a>
+        </div>
+        <br>
+        <!-- Social Icons -->
+        <div class="flex gap-6 mt-6 justify-center lg:justify-start text-gray-500 dark:text-gray-300 text-xl">
+          <a href="https://github.com/leonardstaniloiu" target="_blank"
+            class="hover:text-purple-500 transition-colors duration-300"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/leonard-staniloiu-7b9382246/" target="_blank"
+            class="hover:text-purple-500 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:staniloiuleonard@gmail.com" class="hover:text-purple-500 transition-colors duration-300"><i
+              class="fas fa-envelope"></i></a>
+        </div>
+        <br><br>
+        <div data-ro="Schimba limba" data-en="Change language" class="text-white">Schimba limba</div>
+        <a class="text-white font-extrabold" onclick="toggleLanguage('ro')" href="#"><span class="fi fi-ro"></span> |
+        </a></li>
+              <a onclick="toggleLanguage('en')" href="#"><span class="fi fi-us"></span></a></li>
       </div>
-    </section>
+      <!-- Right Image -->
+      <div class="flex-1 flex justify-center animate-float">
+        <img src="img/pozaprofil.png" alt="Leo"
+          class="w-64 h-64 rounded-full border-4 border-indigo-500 dark:border-indigo-400 shadow-xl object-cover hover:scale-105 transition-all duration-500" />
+      </div>
+    </div>
+  </section>
 
-<script>
-  function toggleLanguage(lang) {
-    document.querySelectorAll("[data-" + lang + "]").forEach(el => {
-      el.innerHTML = el.getAttribute("data-" + lang);
-    });
-  }
-  // Default language
-  toggleLanguage("ro");
-</script>
-  </body>
+  <script>
+    function toggleLanguage(lang) {
+      document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+        el.innerHTML = el.getAttribute("data-" + lang);
+      });
+    }
+    // Default language
+    toggleLanguage("ro");
+  </script>
+</body>
+
 </html>
