@@ -1,163 +1,120 @@
 <!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Educatie si experienta profesionala</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Caveat:wght@500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
     <script>
-        window.history.replaceState('', '', '/');
+       window.history.replaceState('','','/');
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body class="transition-colors duration-300">
-    <section
-        class="min-h-screen flex items-center justify-center bg-dark dark:bg-gray-900 px-6 py-20 transition-colors duration-300">
-        <div class="absolute top-4 right-6 flex items-center space-x-2">
-            <div class="text-white font-semibold" data-ro="Schimba limba" data-en="Change language">Schimba limba</div>
-            <a class="text-white font-extrabold" onclick="toggleLanguage('ro')" href="#"><span
-                    class="fi fi-ro"></span></a>
-            <span class="text-gray-400">|</span>
-            <a class="text-white font-extrabold" onclick="toggleLanguage('en')" href="#"><span
-                    class="fi fi-us"></span></a>
-        </div>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body class="transition-colors duration-300">
+    <section class="min-h-screen flex items-center justify-center bg-dark dark:bg-gray-900 px-6 py-20 transition-colors duration-300">
+                    <div class="absolute top-4 right-6 flex items-center space-x-2">
+      <div class="text-white font-semibold" data-ro="Schimba limba" data-en="Change language">Schimba limba</div>
+      <a class="text-white font-extrabold" onclick="toggleLanguage('ro')" href="#"><span class="fi fi-ro"></span></a>
+      <span class="text-gray-400">|</span>
+      <a class="text-white font-extrabold" onclick="toggleLanguage('en')" href="#"><span class="fi fi-us"></span></a>
+    </div>           
         <!-- Vertical Timeline #1 -->
-        <div class="-my-6">
-            <h1 data-en="Education" data-ro="Educatie"
-                class="font-extrabold text-4xl text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Educatie</h1>
-            <br>
-            <!-- Item #1 -->
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-                <!-- Purple label -->
-                <div data-en="Master diploma" data-ro="Diploma master"
-                    class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Diploma master</div>
-                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-                <div
-                    class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                    <time data-en="09/2024 - Present" data-ro="09/2024 - Prezent"
-                        class="sm:absolute right-220 inline-flex items-center justify-center text-xs font-semibold uppercase w-33 h-10 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-xl">09/2024
-                        - Prezent</time>
-                    <div data-en="Politehnica University of Timisoara" data-ro="Universitatea Politehnica Timisoara"
-                        class="text-xl font-bold text-white">Universitatea Politehnica Timisoara</div>
-                </div>
-                <!-- Content -->
-                <div data-en="Faculty of Automation and Computers, specialization Information Technology"
-                    data-ro="Facultate de Automatica si Calculatoare, specializarea Tehnologia Informatiei"
-                    class="text-slate-400">Facultatea de Automatica si Calculatoare, specializarea Tehnologia
-                    Informatiei</div>
-                <ul class="text-slate-400">
-                </ul>
-            </div>
-            <!-- Item #2 -->
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-                <!-- Purple label -->
-                <div data-en="Bachelor's Degree" data-ro="Diploma licenta"
-                    class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Diploma licenta</div>
-                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-                <div
-                    class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                    <time
-                        class="sm:absolute right-220 inline-flex items-center justify-center text-xs font-semibold uppercase w-33 h-10 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-xl">09/2021
-                        - 06/2024</time>
-                    <div data-en="Politehnica University of Timisoara" data-ro="Universitatea Politehnica Timisoara"
-                        class="text-xl font-bold text-white">Universitatea Politehnica Timisoara</div>
-                </div>
-                <!-- Content -->
-                <div data-en="Faculty of Automation and Computers, specialization Informatics"
-                    data-ro="Facultatea de Automatica si Calculatoare, specializarea Informatica"
-                    class="text-slate-400">Facultatea de Automatica si Calculatoare, specializarea Informatica</div>
-            </div>
-            <!-- Item #3-->
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-                <!-- Purple label -->
-                <div data-en="High School Diploma" data-ro="Diploma de bacalaureat"
-                    class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Diploma de bacalaureat</div>
-                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-                <div
-                    class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                    <time
-                        class="sm:absolute right-220 inline-flex items-center justify-center text-xs font-semibold uppercase w-33 h-10 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-xl">09/2017
-                        - 06/2021</time>
-                    <div data-en="'Ecaterina Teodoroiu' National College , Targu-Jiu"
-                        data-ro="Colegiul National 'Ecaterina Teodoroiu', Targu-Jiu"
-                        class="text-xl font-bold text-white">Colegiul National "Ecaterina Teodoroiu", Targu-Jiu</div>
-                </div>
-                <!-- Content -->
-                <div data-en="Specialization: Mathematics-Informatics" data-ro="Specializarea: Matematica-Informatica"
-                    class="text-slate-400">Specializarea: Matematica-Informatica</div>
-            </div>
-            <br><br>
-            <div class="-my-6">
-                <h1 data-en="Work experience" data-ro="Experienta profesionala"
-                    class="font-extrabold text-4xl text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    Experienta profesionala</h1>
-                <br>
-                <!-- Item #1 -->
-                <div class="relative pl-8 sm:pl-32 py-6 group">
-                    <!-- Purple label -->
-                    <div class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Software Developer Intern
-                    </div>
-                    <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-                    <div
-                        class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                        <time
-                            class="sm:absolute right-220 inline-flex items-center justify-center text-xs font-semibold uppercase w-33 h-10 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-xl">07/2023
-                            - 07/2025</time>
-                        <div class="text-xl font-bold text-white">Continental Autonomous Mobility, Timisoara</div>
-                    </div>
-                    <!-- Content -->
-                    <div data-en="Department: ADAS (Advanced Driver Assistance Systems)"
-                        data-ro="Departament: ADAS (Advanced Driver Assistance Systems)" class="text-slate-400">
-                        Departament: ADAS (Advanced Driver Assistance Systems)</div>
-                    <div data-en="• Contributed to radar software development within an AUTOSAR-based
-architecture" data-ro="• Am contribuit la realizarea software-ului pentru proiecte radar bazate pe arhitectura AUTOSAR."
-                        class="text-slate-400">• Am contribuit la realizarea software-ului pentru proiecte radar bazate
-                        pe arhitectura AUTOSAR. </div>
-                    <div data-en="• Created unit test environment (stubs, mocks, cmake files) and performed unit
+                    <div class="-my-6">
+                        
+                      <h1 data-en="Education" data-ro="Educatie" class="font-extrabold text-4xl text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Educatie</h1>
+                      <br>
+                        <!-- Item #1 -->
+                        <div class="relative pl-8 sm:pl-32 py-6 group">
+                            <!-- Purple label -->
+                            <div data-en="Master diploma" data-ro="Diploma master" class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Diploma master</div>
+                            <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                            <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                                <time data-en="09/2024 - Present" data-ro="09/2024 - Prezent" class="sm:absolute right-220 inline-flex items-center justify-center text-xs font-semibold uppercase w-33 h-10 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-xl">09/2024 - Prezent</time>
+                                <div data-en="Politehnica University of Timisoara" data-ro="Universitatea Politehnica Timisoara" class="text-xl font-bold text-white">Universitatea Politehnica Timisoara</div>
+                            </div>
+                            <!-- Content -->
+                            <div data-en="Faculty of Automation and Computers, specialization Information Technology" data-ro="Facultate de Automatica si Calculatoare, specializarea Tehnologia Informatiei" class="text-slate-400">Facultatea de Automatica si Calculatoare, specializarea Tehnologia Informatiei</div>
+                            <ul class="text-slate-400">
+                            </ul>
+                        </div>
+                        
+                        <!-- Item #2 -->
+                        <div class="relative pl-8 sm:pl-32 py-6 group">
+                            <!-- Purple label -->
+                            <div data-en="Bachelor's Degree" data-ro="Diploma licenta" class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Diploma licenta</div>
+                            <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                            <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                                <time class="sm:absolute right-220 inline-flex items-center justify-center text-xs font-semibold uppercase w-33 h-10 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-xl">09/2021 - 06/2024</time>
+                                <div data-en="Politehnica University of Timisoara" data-ro="Universitatea Politehnica Timisoara" class="text-xl font-bold text-white">Universitatea Politehnica Timisoara</div>
+                            </div>
+                            <!-- Content -->
+                            <div data-en="Faculty of Automation and Computers, specialization Informatics" data-ro="Facultatea de Automatica si Calculatoare, specializarea Informatica" class="text-slate-400">Facultatea de Automatica si Calculatoare, specializarea Informatica</div>
+                        </div>
+                        <!-- Item #3-->
+                        <div class="relative pl-8 sm:pl-32 py-6 group">
+                            <!-- Purple label -->
+                            <div data-en="High School Diploma" data-ro="Diploma de bacalaureat" class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Diploma de bacalaureat</div>
+                            <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                            <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                                <time class="sm:absolute right-220 inline-flex items-center justify-center text-xs font-semibold uppercase w-33 h-10 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-xl">09/2017 - 06/2021</time>
+                                <div data-en="'Ecaterina Teodoroiu' National College , Targu-Jiu" data-ro="Colegiul National 'Ecaterina Teodoroiu', Targu-Jiu" class="text-xl font-bold text-white">Colegiul National "Ecaterina Teodoroiu", Targu-Jiu</div>
+                            </div>
+                            <!-- Content -->
+                            <div data-en="Specialization: Mathematics-Informatics" data-ro="Specializarea: Matematica-Informatica" class="text-slate-400">Specializarea: Matematica-Informatica</div>
+                        </div>
+                        <br><br>
+                   <div class="-my-6">
+                      <h1 data-en="Work experience" data-ro="Experienta profesionala" class="font-extrabold text-4xl text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Experienta profesionala</h1>
+                      <br>
+                        <!-- Item #1 -->
+                        <div class="relative pl-8 sm:pl-32 py-6 group">
+                            <!-- Purple label -->
+                            <div class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">Software Developer Intern</div>
+                            <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                            <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                                <time class="sm:absolute right-220 inline-flex items-center justify-center text-xs font-semibold uppercase w-33 h-10 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-xl">07/2023 - 07/2025</time>
+                                <div class="text-xl font-bold text-white">Continental Autonomous Mobility, Timisoara</div>
+                            </div>
+                            <!-- Content -->
+                            <div data-en="Department: ADAS (Advanced Driver Assistance Systems)" data-ro="Departament: ADAS (Advanced Driver Assistance Systems)" class="text-slate-400">Departament: ADAS (Advanced Driver Assistance Systems)</div>
+                            <div data-en="• Contributed to radar software development within an AUTOSAR-based
+architecture" data-ro="• Am contribuit la realizarea software-ului pentru proiecte radar bazate pe arhitectura AUTOSAR." class="text-slate-400">• Am contribuit la realizarea software-ului pentru proiecte radar bazate pe arhitectura AUTOSAR.   </div>
+                            <div data-en="• Created unit test environment (stubs, mocks, cmake files) and performed unit
 testing using GTest framework" data-ro="• Crearea mediului pentru testarea unitara (stubs, mocks, fisiere cmake) si
-realizarea testelor folosind GoogleTest." class="text-slate-400">• Crearea mediului pentru testarea unitara (stubs,
-                        mocks, fisiere cmake) si
-                        realizarea testelor folosind GoogleTest.</div>
-                    <div data-en="• Used QAC Helix to resolve MISRA warnings"
-                        data-ro=">• Am folosit QAC Helix pentru a metine standardul MISRA." class="text-slate-400">• Am
-                        folosit QAC Helix pentru a metine standardul MISRA.</div>
-                    <div data-en="• Integrated development tools such as quality gates, automated CTC reports and "
-                        data-ro="• Am integrat instrumente de dezvoltare precum quality gates, rapoarte CTC
+realizarea testelor folosind GoogleTest." class="text-slate-400">• Crearea mediului pentru testarea unitara (stubs, mocks, fisiere cmake) si
+realizarea testelor folosind GoogleTest.</div>
+                            <div data-en="• Used QAC Helix to resolve MISRA warnings" data-ro=">• Am folosit QAC Helix pentru a metine standardul MISRA." class="text-slate-400">• Am folosit QAC Helix pentru a metine standardul MISRA.</div>
+                            <div data-en="• Integrated development tools such as quality gates, automated CTC reports and " data-ro="• Am integrat instrumente de dezvoltare precum quality gates, rapoarte CTC
 automatizate si" class="text-slate-400">• Am integrat instrumente de dezvoltare precum quality gates, rapoarte CTC
-                        automatizate si </div>
-                    <div data-en="other CI components to ensure software validation and quality monitoring." data-ro="alte componente CI pentru a asigura validarea software-ului și
+automatizate si </div>
+<div data-en="other CI components to ensure software validation and quality monitoring." data-ro="alte componente CI pentru a asigura validarea software-ului și
 monitorizarea calitatii." class="text-slate-400">alte componente CI pentru a asigura validarea software-ului și
-                        monitorizarea calitatii.</div>
-                    <div data-en="• Gained experience working in an Agile environment using Scrum methodology,
-with regular sprint plannings&review" data-ro="• Am dobandit experienta intr-un mediu Agile, folosind metodologia Scrum, cu
-planificari si revizuiri regulate de sprint." class="text-slate-400">• Am dobandit experienta intr-un mediu Agile,
-                        folosind metodologia Scrum, cu
-                        planificari si revizuiri regulate de sprint.</div>
-                    <div data-en="• Created detailed design(descriptions, sequences diagrams) based on requirements and functional design"
-                        data-ro="• Am realizat detailed design pentru componentele pe care am lucrat (descrieri, diagrame de secventa)."
-                        class="text-slate-400">• Am realizat detailed design pentru componentele pe care am lucrat
-                        (descrieri, diagrame de secventa). </div>
-                </div>
-            </div>
-        </div>
-        <!-- End: Vertical Timeline #1 -->
-    </section>
-    <script>
-        function toggleLanguage(lang) {
-            document.querySelectorAll("[data-" + lang + "]").forEach(el => {
-                el.innerHTML = el.getAttribute("data-" + lang);
-            });
-        }
-        // Default language
-        toggleLanguage("ro");
-    </script>
-</body>
+monitorizarea calitatii.</div>
+                            <div data-en="• Gained experience working in an Agile environment using Scrum methodology,
+with regular sprint plannings." data-ro="• Am dobandit experienta intr-un mediu Agile, folosind metodologia Scrum, cu
+planificari si revizuiri regulate de sprint." class="text-slate-400">• Am dobandit experienta intr-un mediu Agile, folosind metodologia Scrum, cu
+planificari si revizuiri regulate de sprint.</div>
+                            <div data-en="• Created detailed design(descriptions, sequences diagrams) based on requirements and functional design" data-ro="• Am realizat detailed design pentru componentele pe care am lucrat (descrieri, diagrame de secventa)." class="text-slate-400">• Am realizat detailed design pentru componentele pe care am lucrat (descrieri, diagrame de secventa). </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <!-- End: Vertical Timeline #1 -->  
 
+            </section>
+<script>
+  function toggleLanguage(lang) {
+    document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+      el.innerHTML = el.getAttribute("data-" + lang);
+    });
+  }
+  // Default language
+  toggleLanguage("ro");
+</script>
+  </body>
 </html>
