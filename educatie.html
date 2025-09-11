@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Educatie si experienta profesionala</title>
+    <title data-ro="Educatie si experienta profesionala" data-en="Education and work experience">Educatie si experienta profesionala</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="img/iconresume.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -14,10 +15,27 @@
        window.history.replaceState('','','/');
     </script>
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      @keyframes float {
+      0%,
+      100% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(-5px);
+      }
+    }
+      .animate-float { 
+        animation: float 3s ease-in-out infinite;
+    }
+    </style>
   </head>
   <body class="transition-colors duration-300">
     <section class="min-h-screen flex items-center justify-center bg-dark dark:bg-gray-900 px-6 py-20 transition-colors duration-300">
-                    <div class="absolute top-4 right-6 flex items-center space-x-2">
+      <div class="absolute top-4 left-6 flex items-center space-x-2 text-slate-100 font-extrabold">
+       <i class="fa-solid fa-arrow-left animate-float"></i> <a data-en="Back to homepage" data-ro=" Inapoi la pagina principala" href="index.html"> Inapoi la pagina principala</a>
+      </div>
+    <div class="absolute top-4 right-6 flex items-center space-x-2">
       <div class="text-white font-semibold" data-ro="Schimba limba" data-en="Change language">Schimba limba</div>
       <a class="text-white font-extrabold" onclick="toggleLanguage('ro')" href="#"><span class="fi fi-ro"></span></a>
       <span class="text-gray-400">|</span>
@@ -25,7 +43,6 @@
     </div>           
         <!-- Vertical Timeline #1 -->
                     <div class="-my-6">
-                        
                       <h1 data-en="Education" data-ro="Educatie" class="font-extrabold text-4xl text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Educatie</h1>
                       <br>
                         <!-- Item #1 -->
@@ -96,7 +113,7 @@ automatizate si </div>
 monitorizarea calitatii." class="text-slate-400">alte componente CI pentru a asigura validarea software-ului și
 monitorizarea calitatii.</div>
                             <div data-en="• Gained experience working in an Agile environment using Scrum methodology,
-with regular sprint plannings." data-ro="• Am dobandit experienta intr-un mediu Agile, folosind metodologia Scrum, cu
+with regular sprint plannings&review." data-ro="• Am dobandit experienta intr-un mediu Agile, folosind metodologia Scrum, cu
 planificari si revizuiri regulate de sprint." class="text-slate-400">• Am dobandit experienta intr-un mediu Agile, folosind metodologia Scrum, cu
 planificari si revizuiri regulate de sprint.</div>
                             <div data-en="• Created detailed design(descriptions, sequences diagrams) based on requirements and functional design" data-ro="• Am realizat detailed design pentru componentele pe care am lucrat (descrieri, diagrame de secventa)." class="text-slate-400">• Am realizat detailed design pentru componentele pe care am lucrat (descrieri, diagrame de secventa). </div>
