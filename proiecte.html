@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title data-ro="Proiecte" data-en="Projects">Proiecte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="img/iconresume.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <script>
+       window.history.replaceState('','','/');
+    </script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      @keyframes float {
+      0%,
+      100% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(-5px);
+      }
+    }
+      .animate-float { 
+        animation: float 3s ease-in-out infinite;
+    }
+    </style>
+  </head>
+  <body class="transition-colors duration-300">
+    <section class="min-h-screen flex items-center justify-center bg-dark dark:bg-gray-900 px-6 py-20 transition-colors duration-300">
+      <div class="absolute top-4 left-6 flex items-center space-x-2 text-slate-100 font-extrabold">
+       <i class="fa-solid fa-arrow-left animate-float"></i> <a data-en="Back to homepage" data-ro=" Inapoi la pagina principala" href="index.html"> Inapoi la pagina principala</a>
+      </div>
+    <div class="absolute top-4 right-6 flex items-center space-x-2">
+      <div class="text-white font-semibold" data-ro="Schimba limba" data-en="Change language">Schimba limba</div>
+      <a class="text-white font-extrabold" onclick="toggleLanguage('ro')" href="#"><span class="fi fi-ro"></span></a>
+      <span class="text-gray-400">|</span>
+      <a class="text-white font-extrabold" onclick="toggleLanguage('en')" href="#"><span class="fi fi-us"></span></a>
+    </div>       
+    
+    <div class="max-w-2xl mx-auto p-6">
+  <h1 data-en="Projects" data-ro="Proiecte" class="font-extrabold text-4xl text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Proiecte</h1>
+  <br>
+
+<!-- Accordion Item 1 -->
+<div class="border-b border-slate-200 w-full">
+  <button onclick="toggleAccordion(1)" 
+          class="w-full flex justify-between items-center py-5 text-slate-100">
+    <span class="truncate pr-6">MedScan App --- dffffffffffffffff</span>
+    
+    <!-- Aici e săgeata implicită (în sus, ca "închis") -->
+    <span id="icon-1" class="text-slate-100 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" 
+           viewBox="0 0 16 16" fill="currentColor">
+        <path fill-rule="evenodd" 
+              d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 
+                 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25
+                 a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 
+                 1 0 1.06Z" 
+              clip-rule="evenodd" />
+      </svg>
+    </span>
+  </button>
+
+  <div id="content-1" 
+       class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+    <div class="pb-5 text-sm text-slate-500">test</div>
+  </div>
+</div>
+
+<!-- Accordion Item 1 -->
+<div class="border-b border-slate-200 w-full">
+  <button onclick="toggleAccordion(2)" 
+          class="w-full flex justify-between items-center py-5 text-slate-100">
+    <span class="truncate pr-6">MedScan App</span>
+    
+    <!-- Aici e săgeata implicită (în sus, ca "închis") -->
+    <span id="icon-2" class="text-slate-100 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" 
+           viewBox="0 0 16 16" fill="currentColor">
+        <path fill-rule="evenodd" 
+              d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 
+                 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25
+                 a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 
+                 1 0 1.06Z" 
+              clip-rule="evenodd" />
+      </svg>
+    </span>
+  </button>
+
+  <div id="content-2" 
+       class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+    <div class="pb-5 text-sm text-slate-500">test</div>
+  </div>
+</div>
+
+<!-- Accordion Item 3 -->
+<div class="border-b border-slate-200 w-full">
+  <button onclick="toggleAccordion(3)" 
+          class="w-full flex justify-between items-center py-5 text-slate-100">
+    <span class="truncate pr-6">MedScan App  </span>
+    
+    <!-- Aici e săgeata implicită (în sus, ca "închis") -->
+    <span id="icon-3" class="text-slate-100 transition-transform duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" 
+           viewBox="0 0 16 16" fill="currentColor">
+        <path fill-rule="evenodd" 
+              d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 
+                 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25
+                 a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 
+                 1 0 1.06Z" 
+              clip-rule="evenodd" />
+      </svg>
+    </span>
+  </button>
+
+  <div id="content-3" 
+       class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+    <div class="pb-5 text-sm text-slate-500">tedddddddddddddddddddddddddddddddddddddddddddddddddst</div>
+    <div class="pb-5 text-sm text-slate-500">tedddddddddddddddddddddddddddddddddddddddddddddddddst</div>
+    <div class="pb-5 text-sm text-slate-500">tedddddddddddddddddddddddddddddddddddddddddddddddddst</div>
+    <div class="pb-5 text-sm text-slate-500">tedddddddddddddddddddddddddddddddddddddddddddddddddddddddsddddddddddddddddddddddddddstfffffffffffffffffffffffffffffffff</div>
+  </div>
+</div>
+
+ 
+</section>
+<script>
+function toggleAccordion(index) {
+    const content = document.getElementById(`content-${index}`);
+    const icon = document.getElementById(`icon-${index}`);
+ 
+    // SVG for Down icon
+    const downSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+      </svg>
+    `;
+ 
+    // SVG for Up icon
+    const upSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+      </svg>
+    `;
+ 
+    // Toggle the content's max-height for smooth opening and closing
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+      content.style.maxHeight = '0';
+      icon.innerHTML = upSVG;
+    } else {
+      content.style.maxHeight = content.scrollHeight + 'px';
+      icon.innerHTML = downSVG;
+    }
+  }
+
+  function toggleLanguage(lang) {
+    document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+      el.innerHTML = el.getAttribute("data-" + lang);
+    });
+  }
+  // Default language
+  toggleLanguage("ro");
+</script>
+  </body>
+</html>
