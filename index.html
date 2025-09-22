@@ -2,6 +2,15 @@
 <html>
 
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0M8ZL36BSF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0M8ZL36BSF');
+</script>
   <meta charset="UTF-8" />
   <title data-ro="Pagina principala" data-en="Homepage">Pagina principala</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,9 +23,6 @@
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0M8ZL36BSF"></script>
-
   <style>
     @keyframes fadeInUp {
       from {
@@ -134,12 +140,6 @@
   </section>
 
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-0M8ZL36BSF');
-
     function toggleLanguage(lang) {
       document.querySelectorAll("[data-" + lang + "]").forEach(el => {
         el.innerHTML = el.getAttribute("data-" + lang);
